@@ -1,12 +1,27 @@
+exports.min = function min(array) {
+    /*создание финкции для нахождения минимального элемента в массиве */
+    return array === undefined || array.length === 0
+        ? 0
+        : Math.min(
+              ...array
+          ); /*  делаем проверку пустой ли массиве, если пусто то возрощаем 0 и если он не пустой  
+   из array делаем строку чисел и с помощью метода Math.min в строке ищем минимальное значение и возрощяем */
+};
 
-exports.min = function min (array) {
-  return 0;
-}
+exports.max = function max(array) {
+    /*создание финкции для нахождения миксимаотного элемента в массиве*/
+    return array === undefined || array.length === 0
+        ? 0
+        : Math.max(
+              ...array
+          ); /* делаем проверку пустой ли массиве, если пусто то возрощаем 0 и если он не пустой  
+ из array делаем строку чисел и с помощью метода Math.max в строке ищем максимальное значение и возрощяем  */
+};
 
-exports.max = function max (array) {
-  return 0;
-}
-
-exports.avg = function avg (array) {
-  return 0;
-}
+exports.avg = function avg(array) {
+   
+    return array === undefined || array.length === 0 /*делаем проверку пустой ли массив и если да то выводим 0, а если нет то выводи найденное значение value */
+        ? 0
+        : (array.reduce((sum, ithem) => sum + ithem, 0) )/ array.length; /*c посощью метода ruduce считаем сумму всего массива и делим на длину всего массива 
+        и получам срелнее значение */
+};
